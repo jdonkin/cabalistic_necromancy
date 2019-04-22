@@ -1,0 +1,29 @@
+<div class="body-wrapper" *ngIf="thought.name !== ''">
+  <div class="cabalistic-image">
+    <img src="{{personImage}}" alt="">
+  </div>
+  <div class="cabalistic-name">
+    <span>Name: </span> {{thought.name}} 
+  </div>
+  <div class="cabalistic-beer">
+    <span>Current Beer: </span>{{thought.currentBeer}}
+  </div>
+  <div class="cabalistic-thought">
+    <span>Current Thought: </span>{{thought.currentThought}}
+  </div>
+  <div class="cabalistic-daydream-1">
+    <span>Daydream:</span> 
+  </div>
+  <div class="cabalistic-daydream-2">
+    <img src="{{thought.daydream}}" alt="">
+  </div>
+</div>
+
+<div class="button-wrapper">
+    <button class="primary-button" (click)="readMind()">Read a Mind</button>
+</div>
+
+
+<div *ngIf="showLoading">
+  <app-loading></app-loading>
+</div>

@@ -1,0 +1,19 @@
+.body-wrapper{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    color: #2d2d2d;
+    display:grid;
+    grid-auto-rows: minmax(50px, auto);
+    margin: 6px 0 0 0;
+}
+
+a{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:hover{
+    color: #009dc4;
+}
+
