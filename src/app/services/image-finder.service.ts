@@ -8,6 +8,10 @@ export class ImageFinderService{
     imageBase:string = "../assets/images/";
 
     getImageString(value:string):string{
-        return `${this.imageBase}/${value}.png`;
+        let image =  `${this.imageBase}${value}.png`;
+        if (image === `${this.imageBase}.png`){
+            return `${this.imageBase}someAssembly.png`
+        }
+        return image;
     }
 }
