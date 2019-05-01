@@ -7,6 +7,7 @@ import { ErrorInterceptor } from './services/error.interceptor';
 import { ErrorComponent } from './views/error/error.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { RouterModule, Route } from '@angular/router';
+import { ImageHandlerDirective } from './directives/image-handler.directive';
 
 const ROUTES:Route[] = [
   {path: 'home', component: DashboardComponent},
@@ -20,7 +21,8 @@ const ROUTES:Route[] = [
     AppComponent,
     LoadingComponent,
     ErrorComponent,
-    DashboardComponent
+    DashboardComponent,
+    ImageHandlerDirective
   ],
   imports: [
     BrowserModule,
