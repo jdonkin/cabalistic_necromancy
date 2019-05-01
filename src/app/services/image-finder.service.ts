@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
 })
 
 export class ImageFinderService{
-    imageBase:string = "../assets/images/";
+    private imageBase:string = "../assets/images/";
 
     getImageString(value:string):string{
         let image =  `${this.imageBase}${value}.png`;

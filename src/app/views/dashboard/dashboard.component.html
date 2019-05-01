@@ -1,6 +1,6 @@
 <div class="body-wrapper" *ngIf="thought.name !== ''">
   <div class="cabalistic-image">
-    <img src="{{personImage}}" alt="">
+    <img src="{{personImage}}" default="{{defaultPersonImage}}" class="person-image" alt="">
   </div>
   <div class="cabalistic-name">
     <span>Name: </span> {{thought.name}} 

@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
   thought:ThoughtModel;
   personImage:string;
+  defaultPersonImage:string;
   showLoading:boolean;
 
   constructor(private _api:ApiService, private _imageService:ImageFinderService, private _router:Router){ }
@@ -20,6 +21,7 @@ export class DashboardComponent implements OnInit {
     const home:string = 'home';
     this.showLoading = false;
     this.thought = new ThoughtModel();
+    this.defaultPersonImage = this._imageService.getImageString('');
     if(this._router.url.includes(home)){
       this.readMind();
     }
@@ -30,7 +32,6 @@ export class DashboardComponent implements OnInit {
     this._api.getThought().subscribe(
       (data:ThoughtModel)=>{
         this.thought = data;
-        console.log(this.thought);
         this.personImage = this._imageService.getImageString(this.thought.name);
         this.showLoading = false;
       }
